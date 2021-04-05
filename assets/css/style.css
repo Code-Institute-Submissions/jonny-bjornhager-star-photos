@@ -7,12 +7,21 @@
   font-family: Montserrat, sans-serif;
 }
 
+.wrapper {
+  position: relative;
+}
+
+/* Navbar and logo */
+
 header {
-  background-color: white;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
 }
 
 #logo {
@@ -21,13 +30,17 @@ header {
   font-size: 240%;
   display: flex;
   justify-content: center;
-  margin-left: 35px;
+  margin-left: 100px;
+  padding: 0 10px;
+  color: white;
+  border: 1px solid white;
+  border-top: none;
 }
 
 #menu {
   display: flex;
   justify-content: center;
-  margin-right: 35px;
+  margin-right: 100px;
 }
 
 #menu ul {
@@ -43,10 +56,47 @@ header {
   text-decoration: none;
   color: black;
   font-weight: bold;
+  font-size: 110%;
   letter-spacing: 4px;
+  color: white;
 }
 
 .nav-link a:hover {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   padding-bottom: 3px;
+}
+
+/* Main section area */
+
+#home {
+  height: 100vh;
+}
+
+.hero-bg {
+  background-image: url(../images/hero-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-outer {
+  background-color: black;
+}
+
+#cover-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#cover-text > h2 {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 10px;
+  font-size: 200%;
 }
