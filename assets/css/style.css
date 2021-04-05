@@ -120,13 +120,21 @@ header {
   background: rgb(20, 110, 212);
   border: none;
   border-radius: 5px;
-  font-size: 20px;
-  color: white;
   transition: transform 0.2s, background 0.2s ease;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 .btn:hover {
   transform: scale(1.1);
   background: rgb(17, 96, 185);
+  cursor: pointer;
+}
+.btn a:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
