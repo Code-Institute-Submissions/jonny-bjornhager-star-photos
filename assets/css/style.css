@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(247, 247, 247);
+  background-color: white;
 }
 
 /* Navbar and logo */
@@ -22,6 +22,11 @@ header {
   position: absolute;
   top: 20px;
   z-index: 1;
+}
+
+h2 {
+  font-family: Montserrat, sans-serif;
+  letter-spacing: 10px;
 }
 
 #logo {
@@ -77,9 +82,6 @@ header {
 #home {
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-bg {
@@ -89,7 +91,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: soft-light;
-  height: 100vh;
+  height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -117,10 +119,10 @@ header {
   margin-top: 40px;
   padding: 15px 50px;
   text-align: center;
-  background: rgb(20, 110, 212);
-  border: none;
+  background: transparent;
+  border: 1px solid white;
   border-radius: 5px;
-  transition: transform 0.2s, background 0.2s ease;
+  transition: transform 0.3s, background 0.3s ease;
 }
 
 .btn a {
@@ -131,7 +133,6 @@ header {
 
 .btn:hover {
   transform: scale(1.1);
-  background: rgb(17, 96, 185);
   cursor: pointer;
 }
 .btn a:hover {
@@ -139,34 +140,64 @@ header {
   cursor: pointer;
 }
 
+.intro {
+  display: flex;
+  justify-content: center;
+  align-content: cente;
+  text-align: center;
+  background-color: rgb(126, 126, 226);
+  width: 100%;
+}
+
+.intro-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: wheat;
+  width: 700px;
+  height: 300px;
+}
+
+/* Gallery section */
+
 #our-work {
   height: 100vh;
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 35px;
+  text-align: center;
 }
 
-.images {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
+.work-text {
+  display: inline-block;
 }
 
-.images img {
+.work-text > h2 {
+  font-weight: bold;
+  font-size: 180%;
+  letter-spacing: 4px;
+  border-bottom: 1px solid black;
+}
+
+.photos {
+  margin-top: 100px;
+  background-color: rgb(216, 216, 216);
+}
+
+.photos img {
   width: 15%;
+  margin: 35px;
+  background-color: rgb(243, 243, 243);
+  border: 3px solid #fffff7;
 }
 
-.video {
-  margin-top: 200px;
-  width: 780px;
-  height: 520px;
+.photo-items {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
 }
 
-.video iframe {
-  width: 100%;
-  height: 100%;
+#contact {
+  height: 100vh;
 }
