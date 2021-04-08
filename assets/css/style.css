@@ -5,6 +5,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -82,6 +87,7 @@ h2 {
 #home {
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .hero-bg {
@@ -154,9 +160,8 @@ h2 {
 .intro {
   display: flex;
   justify-content: center;
-  align-content: center;
+  margin-top: 3.5em;
   text-align: center;
-  /* background-color: rgb(126, 126, 226); */
   width: 100%;
 }
 
@@ -167,9 +172,8 @@ h2 {
   flex-direction: column;
   line-height: 1.8em;
   width: 700px;
-  height: 350px;
   letter-spacing: 1px;
-  margin: 10px 0;
+  margin: 2em 0;
 }
 
 .intro-text > h2 {
@@ -253,7 +257,10 @@ h2 {
 
 .options {
   display: flex;
-  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 .wedding {
@@ -271,9 +278,9 @@ h2 {
 /* Gallery section */
 
 #our-work {
-  height: 100vh;
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 2em;
   text-align: center;
   /* background-color: tomato; */
 }
@@ -282,22 +289,56 @@ h2 {
   display: inline-block;
 }
 
-.work-text > h2 {
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.work-text span {
   font-family: Roboto, sans-serif;
-  font-size: 200%;
-  margin-top: 100px;
 }
 
-.photos {
+.work-text h2 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 200%;
   margin-top: 100px;
+  position: relative;
+}
+
+.work-text p {
+  color: #616161;
+  line-height: 1.8em;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+.work-text h2:before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  background: #000;
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  z-index: -2;
+}
+
+.work-text h2:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  background: #000;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  z-index: -2;
+}
+
+span {
+  background-color: #fff;
 }
 
 .photos img {
   width: 15%;
   margin: 35px;
-  background-color: rgb(243, 243, 243);
   box-shadow: 1px 0px 10px #929292;
   transition: transform 0.4s ease, box-shadow 0.5s ease;
 }
@@ -311,8 +352,52 @@ h2 {
   display: flex;
   justify-content: center;
   margin: 5px;
+  position: relative;
 }
 
-#contact {
-  height: 100vh;
+.videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.videos h3 {
+  margin: 3em 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: Roboto, sans-serif;
+  font-size: 170%;
+}
+
+.video-player {
+  background-color: blue;
+  width: 1280px;
+  height: 720px;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(241, 241, 241);
+  display: flex;
+  font-size: 300%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.4s ease;
+}
+
+footer a:hover {
+  transform: scale(1.1);
 }
