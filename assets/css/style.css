@@ -287,6 +287,7 @@ p {
 #our-work {
   width: 100%;
   margin: 0 auto;
+  padding-top: 100px;
   text-align: center;
   /* background-color: tomato; */
 }
@@ -301,7 +302,6 @@ p {
 
 .work-text h3 {
   text-transform: uppercase;
-  margin-top: 100px;
   position: relative;
 }
 
@@ -339,8 +339,13 @@ span {
   background-color: #fff;
 }
 
+.photos {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .photos img {
-  width: 15%;
+  width: 20%;
   margin: 35px;
   box-shadow: 1px 0px 10px #929292;
   transition: transform 0.4s ease, box-shadow 0.5s ease;
@@ -366,7 +371,7 @@ span {
   margin: 0 auto;
   width: 90%;
   flex-direction: row;
-  margin-bottom: 3em;
+  margin-bottom: 10em;
 }
 
 .videos h3 {
@@ -399,7 +404,7 @@ span {
   justify-content: center;
   align-items: center;
   padding: 5em 0;
-  font-size: 1.2em;
+  font-size: 0.8em;
   background-color: rgb(19, 18, 18);
   color: white;
 }
@@ -431,7 +436,7 @@ span {
 
 footer {
   height: 100px;
-  background-color: rgb(241, 241, 241);
+  background-color: rgb(255, 255, 255);
   display: flex;
   font-size: 250%;
   width: 100%;
