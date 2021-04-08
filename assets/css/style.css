@@ -8,27 +8,14 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: white;
   position: relative;
-}
-
-/* Navbar and logo */
-
-header {
+  height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  position: absolute;
-  top: 20px;
-  z-index: 1;
 }
+
+/* Global properties for typography */
 
 h2,
 h3 {
@@ -44,6 +31,21 @@ p {
   color: #616161;
   letter-spacing: 1px;
 }
+
+/* Area containing the logo and the navbar */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+}
+
+/* Logo and navigation bar */
 
 #logo {
   font-family: Roboto, sans-serif;
@@ -101,6 +103,8 @@ p {
   position: relative;
 }
 
+/* Top background image area */
+
 .hero-bg {
   background-image: url(../images/hero-bg.jpg);
   background-position: center center;
@@ -114,6 +118,8 @@ p {
   position: relative;
   z-index: 0;
 }
+
+/* Adds a black overlay to the hero image */
 
 .hero-bg::before,
 .hero-bg::after {
@@ -143,6 +149,9 @@ p {
   line-height: 1.5em;
 }
 
+/* This buttons takes you to a small section
+of photos on the home page */
+
 .btn {
   margin-top: 40px;
   padding: 15px 50px;
@@ -169,7 +178,9 @@ p {
   cursor: pointer;
 }
 
-.intro {
+/* A short info section on the home page */
+
+.info {
   display: flex;
   justify-content: center;
   margin-top: 3.5em;
@@ -196,6 +207,8 @@ p {
 .info-text h3 {
   padding-bottom: 25px;
 }
+
+/* This is the container for the categories on the home page */
 
 .container {
   width: 100%;
@@ -247,6 +260,8 @@ p {
   transform: scale(1.2);
 }
 
+/* Adds a black overlay to categories section */
+
 .container::before,
 .container::after {
   content: "";
@@ -256,6 +271,8 @@ p {
   width: 100%;
   height: 100%;
 }
+
+/* Hides overflow and zooms in on hover */
 
 .animate-container {
   width: 33.3333333333%;
@@ -275,6 +292,8 @@ p {
   left: 0;
 }
 
+/* Background images for photo category */
+
 .wedding {
   background-image: url(../images/wedding-bg.jpeg);
 }
@@ -287,7 +306,7 @@ p {
   background-image: url(../images/city-bg.jpeg);
 }
 
-/* Gallery section */
+/* Index photos section */
 
 #our-work {
   width: 100%;
@@ -344,6 +363,8 @@ span {
   background-color: #fff;
 }
 
+/* index page photos area */
+
 .photos {
   width: 90%;
   margin: 0 auto;
@@ -368,6 +389,8 @@ span {
   margin: 5px;
   position: relative;
 }
+
+/* Video section with youtube links */
 
 .videos {
   display: flex;
@@ -402,6 +425,8 @@ span {
   width: 100%;
   height: 100%;
 }
+
+/* Section for getting working together */
 
 .work-request {
   display: flex;
@@ -439,6 +464,8 @@ span {
   border: 1px solid #d3d3d3;
 }
 
+/* Footer area */
+
 footer {
   height: 70px;
   background-color: rgb(255, 255, 255);
@@ -460,7 +487,7 @@ footer a {
 }
 
 footer a:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 /* Contact page */
@@ -469,6 +496,8 @@ footer a:hover {
   height: 100vh;
   width: 100%;
 }
+
+/* Submit form */
 
 .form-bg {
   height: 100vh;
@@ -537,4 +566,34 @@ footer a:hover {
   width: 200px;
   font-size: 1.2em;
   color: white;
+}
+
+/* Wedding gallery section */
+
+.gallery-header {
+  background-color: rgb(22, 22, 22);
+}
+
+#wedding-section {
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+}
+
+.wedding-gallery {
+  margin-top: 10em;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(10px, 1fr));
+  grid-template-rows: repeat(4, 10vw);
+  grid-gap: 16px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-1 {
+  grid-column: ;
 }
