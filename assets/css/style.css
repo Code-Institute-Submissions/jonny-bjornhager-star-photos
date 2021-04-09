@@ -1069,7 +1069,6 @@ span {
   .info {
     margin-top: 2em;
     font-size: 85%;
-    /* width: 400px; */
   }
 
   .form {
@@ -1112,10 +1111,6 @@ span {
   }
 
   .container {
-    /* width: 100%;
-    margin: 0 auto;
-    height: 8em;
-    margin-top: 5px; */
     font-size: 60%;
   }
 
