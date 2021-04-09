@@ -1065,7 +1065,7 @@ span {
 @media screen and (max-width: 414px), screen and (max-height: 736px) {
   .form {
     padding-bottom: 1em;
-    margin-top: 45vh;
+    margin-top: 55vh;
     margin-bottom: 10em;
     height: 600px;
     width: 100%;
