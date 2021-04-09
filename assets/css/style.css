@@ -310,6 +310,7 @@ of photos on the home page */
 
 .work-text {
   display: inline-block;
+  margin-bottom: 3em;
 }
 
 .work-text span {
@@ -355,38 +356,25 @@ span {
   background-color: #fff;
 }
 
-/* index page photos area */
+/* Index page photos area */
 
-.photos {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.photos img {
-  width: 20%;
-  margin: 35px;
+.photos img,
+.gallery-container img {
   box-shadow: 1px 0px 10px #929292;
   transition: transform 0.4s ease, box-shadow 0.5s ease;
 }
 
-.photos img:hover {
-  transform: scale(1.1);
+.photos img:hover,
+.gallery-container img:hover {
+  transform: scale(1.02);
   box-shadow: 1px 10px 20px #bdbdbd;
   cursor: pointer;
-}
-
-.photo-items {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-  position: relative;
 }
 
 /* Video section with youtube links */
 
 .videos {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 0 auto;
   width: 90%;
@@ -422,6 +410,7 @@ span {
 
 .work-request {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -485,6 +474,14 @@ span {
 
 .gallery-footer a {
   color: white;
+}
+
+.contact-footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 /* Contact page */
@@ -707,11 +704,8 @@ span {
   }
 
   .photos {
-    width: 85%;
-  }
-
-  .videos {
-    width: 85%;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .videos h3 {
@@ -721,9 +715,6 @@ span {
   .videos p {
     width: min(500px, 70%);
   }
-}
-
-@media screen and (max-width: 2184px) {
 }
 
 /* Media queries for screens smaller than 1740px */
@@ -739,15 +730,7 @@ span {
 
   .video-player {
     width: 340px;
-    height: 156px;
-  }
-
-  .photos {
-    width: 80%;
-  }
-
-  .videos {
-    width: 80%;
+    height: 180px;
   }
 
   .videos h3 {
@@ -792,16 +775,11 @@ span {
   }
 
   .video-player {
-    width: 476px;
-    height: 312px;
-  }
-
-  .photos {
-    width: 80%;
+    width: 800px;
+    height: 480px;
   }
 
   .videos {
-    width: 80%;
     flex-direction: column;
   }
 
@@ -812,92 +790,6 @@ span {
   .videos p {
     width: min(500px, 70%);
   }
-}
-
-/* Ipad screen sizes and smaller */
-@media screen and (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #cover-text > .btn {
-    display: none;
-  }
-
-  .nav-link:hover,
-  .nav-link a:hover {
-    transform: none;
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .hero-bg {
-    height: 30vh;
-  }
-
-  #logo {
-    margin: 0;
-  }
-
-  #menu {
-    margin: 3em 0 0 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  #menu ul {
-    justify-content: space-evenly;
-    display: flex;
-    width: 100%;
-  }
-
-  .nav-link {
-    margin: 0;
-  }
-
-  #cover-text {
-    margin-top: 5em;
-  }
-
-  .options {
-    height: 23em;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .container a:hover, .container:hover {
-    transform: none;
-  }
-
-  .photo-items {
-    flex-wrap: wrap;
-  }
-
-  #wedding-section,
-  #nature-section,
-  #city-section {
-    width: 100%;
-    height: 100vh;
-    font-size: 50%;
-    margin-bottom: 100px;
-  }
-
-  #home .info-text {
-    margin-top: 0;
-  }
-
-  #home .info-text h2 {
-    width: 80%;
-    font-size: 1.1em;
-  }
-
-  #home .info-text {
-    width: 80%;
-    font-size: 0.8em;
-  }
-
-  /* Grid system for gallery on ipads and smaller */
 
   .gallery-container {
     margin: 0 auto;
@@ -971,9 +863,110 @@ span {
     grid-column: 3 / 5;
     grid-row: 11 / 13;
   }
+}
+
+/* Ipad screen sizes and smaller */
+@media screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cover-text > .btn {
+    display: none;
+  }
+
+  .nav-link:hover,
+  .nav-link a:hover {
+    transform: none;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .hero-bg {
+    height: 30vh;
+  }
+
+  #logo {
+    margin: 0;
+  }
+
+  #menu {
+    margin: 3em 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  #menu ul {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+  }
+
+  .nav-link {
+    margin: 0;
+  }
+
+  #cover-text {
+    margin-top: 5em;
+  }
+
+  .options {
+    height: 23em;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .container a:hover,
+  .container:hover {
+    transform: none;
+  }
+
+  #wedding-section,
+  #nature-section,
+  #city-section {
+    width: 100%;
+    height: 100vh;
+    font-size: 50%;
+    margin-bottom: 100px;
+  }
+
+  #home .info-text {
+    margin-top: 0;
+  }
+
+  #home .info-text h2 {
+    width: 80%;
+    font-size: 1.1em;
+  }
+
+  #home .info-text {
+    width: 80%;
+    font-size: 0.8em;
+  }
+
+  .video {
+    width: 100%;
+  }
+
+  .video-player {
+    width: 70%;
+    height: 300px;
+  }
+
+  /* Contact form for ipads */
 
   .form {
     height: 500px;
+  }
+
+  .form input {
+    height: 60px;
+  }
+
+  .form label {
+    margin: 0;
   }
 }
 
@@ -1016,10 +1009,15 @@ span {
     flex-direction: column;
   }
 
-  .photo-items {
-    flex-wrap: wrap;
+  .photos {
+    width: 100%;
   }
 
+  .video-player {
+    width: 340px;
+    height: 214px;
+  }
+}
 
 @media screen and (max-width: 578px) {
   #cover-text {
@@ -1041,16 +1039,13 @@ span {
 
   #home .info-text {
     margin-top: 0;
+    width: 90%;
+    font-size: 0.8em;
   }
 
   #home .info-text h2 {
     width: 90%;
     font-size: 1.1em;
-  }
-
-  #home .info-text {
-    width: 90%;
-    font-size: 0.8em;
   }
 
   .container {
@@ -1060,15 +1055,6 @@ span {
     margin-top: 5px;
   }
 
-  .photos img {
-    width: 100%;
-  }
-
-  .video-player {
-    width: 340px;
-    height: 214px;
-  }
-
   .info-text {
     width: 300px;
   }
@@ -1076,26 +1062,11 @@ span {
   .main-footer a {
     font-size: 1em;
   }
-
-  .main-footer {
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    flex-wrap: wrap;
-  }
 }
 
 @media screen and (max-width: 414px) {
   .info {
     margin-top: 2em;
-  }
-
-  .options {
-    justify-content: center;
-  }
-
-  .photo-items img {
-    height: 500px;
   }
 
   .form {
@@ -1131,7 +1102,6 @@ span {
   }
 
   .options {
-    justify-content: flex-end;
     height: 240px;
   }
 
@@ -1147,11 +1117,6 @@ span {
     font-size: 0.9em;
     width: 80%;
     padding-top: 0;
-  }
-
-  .photos img {
-    width: 50%;
-    height: 200px;
   }
 
   .video {
