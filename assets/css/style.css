@@ -142,6 +142,10 @@ header {
   line-height: 1.5em;
 }
 
+#cover-text .btn {
+  color: white;
+}
+
 /* This buttons takes you to a small section
 of photos on the home page */
 
@@ -478,10 +482,8 @@ span {
 }
 
 .contact-footer {
-  position: fixed;
   width: 100%;
-  left: 0;
-  bottom: 0;
+  padding-bottom: 3em;
   z-index: 2;
 }
 
@@ -490,6 +492,12 @@ span {
 #contact-page {
   height: 100vh;
   width: 100%;
+}
+
+#contact-page h2 {
+  color: white;
+  z-index: 2;
+  padding-bottom: 50px;
 }
 
 /* Submit form */
@@ -555,11 +563,14 @@ span {
   font-size: 1em;
   padding: 0 10px;
   font-weight: bold;
+  color: white;
 }
 
-.submit {
-  width: 200px;
-  font-size: 1.2em;
+#submit-button {
+  width: 150px;
+  font-family: "Robot", sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
   color: white;
 }
 
@@ -1044,6 +1055,10 @@ span {
   }
   .main-footer {
     height: 120px;
+  }
+
+  #submit-button {
+    margin-top: 2em;
   }
 }
 
