@@ -7,11 +7,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: white;
-  position: relative;
-}
-
 /* Global properties for typography */
 
 h2,
@@ -302,15 +297,13 @@ of photos on the home page */
 /* Index photos section */
 
 #our-work {
-  width: 100%;
   margin: 0 auto;
-  padding-top: 100px;
   text-align: center;
 }
 
 .work-text {
   display: inline-block;
-  margin-bottom: 3em;
+  margin: 3em;
 }
 
 .work-text span {
@@ -469,7 +462,15 @@ span {
 }
 
 .gallery-footer {
-  background-color: rgb(22, 22, 22);
+  background-color: black;
+  color: white;
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  font-size: 250%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery-footer a {
@@ -570,18 +571,25 @@ span {
   position: static;
 }
 
-#wedding-section {
+#wedding-section,
+#nature-section,
+#city-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
   width: 90%;
-  height: 100vh;
   text-align: center;
 }
 
-#wedding-section h2 {
+#wedding-section h2,
+#nature-section h2,
+#city-section h2 {
   text-transform: uppercase;
   font-size: 260%;
   padding: 40px 0;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 
 .gallery-container {
@@ -589,6 +597,8 @@ span {
   grid-template-columns: repeat(5, minmax(10px, 1fr));
   grid-template-rows: repeat(4, 10vw);
   grid-gap: 16px;
+  padding-bottom: 4em;
+  /* min-height: 100vh; */
 }
 
 .img {
@@ -653,34 +663,6 @@ span {
 .img-12 {
   grid-column: 4 / 5;
   grid-row: 4 / 5;
-}
-
-#nature-section {
-  margin: 0 auto;
-  width: 90%;
-  height: 100vh;
-  text-align: center;
-}
-
-#nature-section h2 {
-  text-transform: uppercase;
-  font-size: 260%;
-  padding: 40px 0;
-  margin-bottom: 70px;
-}
-
-#city-section {
-  margin: 0 auto;
-  width: 90%;
-  height: 100vh;
-  text-align: center;
-}
-
-#city-section h2 {
-  text-transform: uppercase;
-  font-size: 260%;
-  padding: 40px 0;
-  margin-bottom: 70px;
 }
 
 /* Media queries for screens smaller than 2330px */
@@ -791,13 +773,16 @@ span {
     width: min(500px, 70%);
   }
 
+  #wedding-section h2,
+  #nature-section h2,
+  #city-section h2 {
+    font-size: 120%;
+  }
   .gallery-container {
-    display: grid;
     margin: 0 auto;
     width: 80%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(12, 10vw);
-    grid-gap: 16px;
   }
 
   .img {
@@ -863,51 +848,6 @@ span {
     grid-column: 3 / 5;
     grid-row: 11 / 13;
   }
-
-  .gallery-footer {
-  }
-}
-
-@media screen and (max-width: 1520px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #cover-text > .btn {
-    display: none;
-  }
-
-  .nav-link:hover,
-  .nav-link a:hover {
-    transform: none;
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .hero-bg {
-    height: 30vh;
-  }
-
-  #logo {
-    margin: 0;
-  }
-
-  #menu {
-    margin: 3em 0 0 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  #menu ul {
-    justify-content: space-evenly;
-    display: flex;
-    width: 100%;
-  }
-
-  .nav-link {
-    margin: 0;
-  }
 }
 
 /* Ipad screen sizes and smaller */
@@ -931,10 +871,8 @@ span {
   #wedding-section,
   #nature-section,
   #city-section {
-    width: 100%;
-    height: 100vh;
-    font-size: 50%;
-    margin-bottom: 100px;
+    font-size: 100%;
+    padding-bottom: 5em;
   }
 
   #home .info-text {
@@ -980,7 +918,8 @@ span {
     color: white;
   }
 
-  .form .btn:hover {
+  .form .btn:hover,
+  a:hover {
     transition: none;
     transform: none;
   }
@@ -1035,7 +974,7 @@ span {
   }
 }
 
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 594px) {
   #cover-text {
     display: none;
   }
@@ -1075,8 +1014,12 @@ span {
     width: 300px;
   }
 
-  .main-footer a {
-    font-size: 1em;
+  .main-footer {
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    flex-wrap: wrap;
+    font-size: 3em;
   }
 }
 
@@ -1087,6 +1030,7 @@ span {
 
   .form {
     margin-top: 30vh;
+    margin-bottom: 15em;
     height: 60vh;
     width: 100%;
   }
@@ -1096,6 +1040,9 @@ span {
   }
   .form label {
     margin-top: 5px;
+  }
+  .main-footer {
+    height: 120px;
   }
 }
 
