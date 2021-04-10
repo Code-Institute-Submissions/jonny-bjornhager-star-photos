@@ -124,6 +124,8 @@ header {
   height: 100%;
 }
 
+/* Hero bg text  */
+
 #cover-text {
   color: white;
   display: flex;
@@ -142,6 +144,8 @@ header {
   line-height: 1.5em;
 }
 
+/* Hero bg button */
+
 #cover-text .btn {
   color: white;
 }
@@ -159,6 +163,8 @@ of photos on the home page */
   text-transform: uppercase;
   transition: transform 0.3s;
 }
+
+/* Button hover effects */
 
 .btn a {
   text-decoration: none;
@@ -248,6 +254,8 @@ of photos on the home page */
   transition: transform 1s ease-in-out;
 }
 
+/* Categories hover effect */
+
 .container a:hover {
   transform: scale(1.2);
 }
@@ -264,7 +272,7 @@ of photos on the home page */
   height: 100%;
 }
 
-/* Hides overflow and zooms in on hover */
+/* Hides overflow and zooms in on hover over categories */
 
 .animate-container {
   width: 33.3333333333%;
@@ -284,7 +292,7 @@ of photos on the home page */
   left: 0;
 }
 
-/* Background images for photo category */
+/* Background images for  categoris on home page */
 
 .wedding {
   background-image: url(../images/wedding-bg.jpeg);
@@ -298,7 +306,7 @@ of photos on the home page */
   background-image: url(../images/city-bg.jpeg);
 }
 
-/* Index photos section */
+/* Our work photos section */
 
 #our-work {
   margin: 0 auto;
@@ -318,6 +326,8 @@ of photos on the home page */
   text-transform: uppercase;
   position: relative;
 }
+
+/* Adds a line before and after the text "Our work" on bigger screens */
 
 .work-text h3::before {
   content: "";
@@ -349,11 +359,13 @@ of photos on the home page */
   margin: 30px 0;
 }
 
+/* Hide the line going behind the text */
+
 span {
   background-color: #fff;
 }
 
-/* Index page photos area */
+/* Our work photos area */
 
 .photos img,
 .gallery-container img {
@@ -403,7 +415,7 @@ span {
   height: 100%;
 }
 
-/* Section for getting working together */
+/* Work request section at bottom of page */
 
 .work-request {
   display: flex;
@@ -444,6 +456,8 @@ span {
 
 /* Footer area */
 
+/* footer for main home page */
+
 .main-footer {
   height: 70px;
   background-color: rgb(255, 255, 255);
@@ -465,6 +479,8 @@ span {
   transform: scale(1.1);
 }
 
+/* Footer for Gallery page */
+
 .gallery-footer {
   background-color: black;
   color: white;
@@ -480,6 +496,8 @@ span {
 .gallery-footer a {
   color: white;
 }
+
+/* Footer for contact page */
 
 .contact-footer {
   width: 100%;
@@ -516,6 +534,8 @@ span {
   position: relative;
   z-index: 0;
 }
+
+/* Adds black overlay to the background image */
 
 .form-bg::before,
 .form-bg::after {
@@ -574,7 +594,7 @@ span {
   color: white;
 }
 
-/* Wedding gallery section */
+/* Gallery section */
 
 .gallery-header {
   background-color: rgb(19, 18, 18);
@@ -601,6 +621,8 @@ span {
   font-size: 260%;
   padding: 40px 0;
 }
+
+/* Grid for bigger screens */
 
 .gallery-container {
   display: grid;
@@ -787,6 +809,9 @@ span {
   #city-section h2 {
     font-size: 120%;
   }
+
+  /* Grid for smaller screen */
+
   .gallery-container {
     margin: 0 auto;
     width: 80%;
