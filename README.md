@@ -46,6 +46,8 @@ Once the design is roughly done the steps taken were:
 
 3. Creating the main and gallery page using css grid for photos.
 
+4. Creating the contact form.
+
 When each part of the site (i.e header, footer, main page etc) had been tweaked and/or fully created, I staged it to be pushed to github using the Git version control system.
 
 The final step is pushing the finished product to github.
